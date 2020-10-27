@@ -1,4 +1,5 @@
-from django.db import modelsfrom django.contrib.auth.models import User
+from django.db import models
+from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
@@ -76,3 +77,4 @@ class Profile(models.Model):
     def get_profile(cls,identity):
         profile = Profile.objects.filter(name__username__icontains = identity)
         return profile
+# Create your models here.

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{{block.super}}
+<div class="container" style="background-color:#243b55
+;margin-right:-1px;margin-left:100px;">
+  <div class="row">
+    {% for con in content %}
+    <div class="col-md-4 col-sm-10" style="float:left; width:33.33%; margin-left:70px;margin-right:50px;margin-bottom:15px;">
+      <div class="card" style="height:450px; border:hidden;">
+        <div class="card-header">
+          <h3 class="text-center" style="color:#138496"><b><i>{{con.title}}</i></b></h3>
+        </div>
+        <a href="/project/{{con.title}}">
+          <img src="{{con.homepage.url}}" alt="homepage pic" class="card-img-top" id="proj_image" data-toggle="tooltip" data-placement="right" title="click here to review/rate">
+
+        </a>
+        <div class="card-body">
+          <p><b>Description:</b> {{con.description}}</p>
+          <p>
+            <a href="{{con.link}}">Live Site</a>
+
+
+          </p>
+          <h3 class="text-center"style="color:#138496"><i>By: {{con.by}}</i></h3>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock %}

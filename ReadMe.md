@@ -9,7 +9,7 @@ Allows Users to store their project and allows for reviews o be conducted on the
 https://github.com/Sonray/The-share-IP3.git
 
 #### live link
-https://awards.herokuapp.com/
+https://awards9000.herokuapp.com/
 
 ## About Author
 Author's name is David Okwacha

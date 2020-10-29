@@ -109,3 +109,9 @@ def new_profile(request):
         form= NewProfileForm()
 
     return render(request, 'new_profile.html', {'form':form})
+
+
+@login_required
+def logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse("home"))

@@ -36,7 +36,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'app',
-    'app.apps.AppConfig',
+    'tinymce',
     'bootstrap4',
     'rest_framework',
     'django.contrib.admin',
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'awards.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if config('MODE')=="dev":
+if config('MODE')=="prod":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',

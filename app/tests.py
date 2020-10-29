@@ -7,17 +7,9 @@ class RateTest(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(id=1, username='k')
-        self.task = Project.objects.create(by=self.user,
-                                           title='k',
-                                           description='l',
-                                           link='m')
-        self.rate = Rate.objects.create(rater=self.user,
-                                        task=self.task,
-                                        design='4',
-                                        content='4',
-                                        usability='4',
-                                        average='4',
-                                        review='k')
+        self.task = Project.objects.create(by=self.user, title='k', description='l', link='m')
+        self.rate = Rate.objects.create(rater=self.user, task=self.task, design='4', content='4',
+                                        usability='4', average='4', review='k')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.rate,Rate))
@@ -26,11 +18,7 @@ class ProjectTest(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(id=1, username='k')
-        self.task = Project.objects.create(id=1,
-                                           by=self.user,
-                                           title='k',
-                                           description='l',
-                                           link='m')
+        self.task = Project.objects.create(id=1, by=self.user, title='k', description='l', link='m')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.task,Project))
@@ -54,15 +42,8 @@ class ProfileTest(TestCase):
 
     def setUp(self):
         self.user = User.objects.create(id=1, username='k')
-        self.task = Project.objects.create(id=1,
-                                           by=self.user,
-                                           title='k',
-                                           description='l',
-                                           link='m')
-        self.profile = Profile.objects.create(name=self.user,
-                                              bio='m',
-                                              projects=self.task,
-                                              contact='m')
+        self.task = Project.objects.create(id=1, by=self.user, title='k', description='l', link='m')
+        self.profile = Profile.objects.create(name=self.user, bio='m', projects=self.task, contact='m')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.profile,Profile))

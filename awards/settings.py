@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '^hnt-!^%y_yi_!k$ox+k&f!p-j-3t0*90=v7)*5^4%zt#7-sdl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'awards.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if config('MODE')=="dev":
+if config('MODE')=="prod":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
